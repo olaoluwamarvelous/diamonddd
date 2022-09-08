@@ -1,0 +1,52 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+
+
+<section class="single-page-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Blog</h2>
+				<ol class="breadcrumb header-bradcrumb">
+				  <li><a href="index.html">Home</a></li>
+				  <li class="active">Blog</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<section class="posts section">
+	<div class="container">
+		<section class="row">
+
+
+            {% if posts %}
+            {% for post in posts %}
+			<article class="col-md-4 col-sm-6 col-xs-12 clearfix ">
+				<div class="post-item">
+					<div class="media-wrapper">
+						<img src="{{post.photo.url}}" alt="amazing caves coverimage" class="img-fluid">
+					</div>
+
+					<div class="content">
+						<h3><a href="">{{post.title}}</a></h3>
+						<p>{{post.intro}}</p>
+						<li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="#">
+                    <time datetime="2020-01-01">{{post.date_added|timesince}}</time></a></li>
+                </ul><a href="{% url 'blogdetail' post.slug %}">Read More</a>					</div>
+				</div>
+			</article>
+			    {% empty %}
+             <div>
+				 no blog
+              </div>
+
+            {% endfor %}
+            {% endif %}
+        </section>
+
+{% endblock %}

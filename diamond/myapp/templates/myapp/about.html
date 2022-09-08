@@ -1,0 +1,102 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+
+
+
+<section class="single-page-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>About Us</h2>
+				<ol class="breadcrumb header-bradcrumb">
+				  <li><a href="index.html">Home</a></li>
+				  <li class="active">About Us</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="about-shot-info section-sm">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 mt-20">
+				<h2>Why Choose <br> DIAMOND SOFTWARE</h2>
+				<p>FULL SERVICE <br> we offer a full service communication plan that maximizes
+				the Engagement Of Your Audience In The
+				NIGERIA Market</p>
+				<p> SUSTAINABILITY <br>
+				sustainable development=oriented communication
+				NIGERIA awereness on sustainable development is much behind compared to the
+				Us and EUROPE.
+				 we value the importance of of sustainable and social
+				impart at an earily stage and have integrated this value in both
+				communication and design</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, fugit itaque ratione incidunt voluptas. Quaerat quidem dolor, quisquam amet inventore quas adipisci ea sint qui placeat beatae molestias aut, aperiam!</p>
+			</div>
+			<div class="col-md-6">
+				<img class="img-fluid" src="images/company/company-image.jpg" alt="">
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<section class="company-mission section-sm bg-gray">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h3>Our Mission</h3>
+				<p>Exceed client's expectations by going beyond
+					software to provide best web solution
+					that transform data to knowledge, enabling them to solve their problem.</p>
+				<img src="{% static 'images/company/company-image-2.jpg' %}" alt="" class="img-fluid mt-30">
+			</div>
+			<div class="col-md-6">
+				<h3>Our Vision</h3>
+				<p> our vision is to a pace setler by inventing <strong>market driven design </strong> or
+					<strong>market approach design </strong> , they exhort employees to get closer to customer , stay ahead of
+				competitor </p>
+				<img src="{% static 'images/company/company-image-3.jpg' %}" alt="" class="img-fluid mt-30">
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+<section class="call-to-action-2 section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h2>.</h2>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+
+
+<section class="call-to-action section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h2>Let's Create Something Together</h2>
+				<a href="{% url 'contact' %}" class="btn btn-main">Contact Us</a>
+			</div>
+		</div> 		<!-- End row -->
+	</div>   	<!-- End container -->
+</section>
+{% endblock %}
+
+
+

@@ -1,0 +1,80 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+
+
+<section class="single-page-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Our Team</h2>
+				<ol class="breadcrumb header-bradcrumb">
+				  <li><a href="index.html">Home</a></li>
+				  <li class="active">Our Team</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="team" id="team">
+	<div class="container">
+		<div class="row">
+
+			<!-- section title -->
+			<div class="col-12">
+				<div class="title text-center ">
+					<h2>Our Team</h2>
+					<p>Here are the indegious team behide the great company.</p>
+					<div class="border"></div>
+				</div>
+			</div>
+
+{% if teams%}
+{% for people in teams %}
+
+			<div class="col-md-4 col-sm-6 ">
+				<div class="team-member text-center">
+					<div class="member-photo">
+						<!-- member photo -->
+						<img class="img-fluid" src="{{people.photo.url}}" alt="Meghna">
+
+
+
+						<div class="mask">
+							<ul class="clearfix">
+								<li><a href="{{people.fbook}}"><i class="tf-ion-social-facebook"></i></a></li>
+								<li><a href="{{people.twitter}}"><i class="tf-ion-social-twitter"></i></a></li>
+								<li><a href="{{people.insta}}"><i class="tf-ion-social-google-outline"></i></a></li>
+								<li><a href="{{people.linkden}"><i class="tf-ion-social-dribbble"></i></a></li>
+							</ul>
+						</div>
+						<!-- /member social profile -->
+					</div>
+
+					<!-- member name & designation -->
+					<div class="member-content">
+						<h3>{{people.name}}</h3>
+						<span>{{people.position}}</span>
+						<p> {{people.point}} </p>
+					</div>
+					<!-- /member name & designation -->
+
+				</div>
+			</div>
+			          {% empty %}
+            <p>No team mate yet</p><!-- End Our Team Section -->
+{% endfor %}
+        {% endif %}<!-- end team member -->
+
+			-- end team member -->
+
+
+		</div> <!-- End row -->
+	</div> <!-- End container -->
+</section> <!-- End section -->
+
+
+
+{% endblock %}

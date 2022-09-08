@@ -1,0 +1,29 @@
+<div class="widget-post widget">
+            <h2>Latest Post</h2>
+            <!-- latest post -->
+            <ul class="widget-post-list">
+                {% if posts %}
+            {% for post in posts %}
+              <li class="widget-post-list-item">
+                <div class="widget-post-image">
+                  <a href="/">
+                    <img src="{{post.photo.url}}" alt="post-img">
+                  </a>
+                </div>
+                <div class="widget-post-content">
+                  <a href="{% url 'blogdetail' post.slug %}">
+                    <h5>{{post.title}}...... READ MORE</h5>
+                  </a>
+                  <h6>{{post.date_added|timesince}}</h6>
+                </div>
+              </li>
+                   {% empty %}
+             <div class="rea
+                </div>d-more">
+                  <a>no news yet </a>
+              </div>
+
+            {% endfor %}
+            {% endif %}
+            </ul>
+          </div>
